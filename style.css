@@ -1,0 +1,118 @@
+/*
+ Theme Name:     Fsdown theme
+ Theme URI:      http://mupi.me
+ Description:    Tema Fundação Síndrome de Down
+ Author:         Mupi
+ Author URI:     http://mupi.me
+ Template:       twentythirteen
+ Version:        1.0.0
+*/
+
+/* =Imports styles from the parent theme
+-------------------------------------------------------------- */
+@import url('../twentythirteen/style.css');
+
+
+/* =Theme customization starts here
+-------------------------------------------------------------- */
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	background: url('images/dust.png');
+	overflow-x: hidden;
+}
+.site{
+	background: none;
+	max-width: none;
+}
+/* Header */
+
+.site-header {
+	background-color: #FFF;
+	background-image: none;
+}
+.navbar {
+	background: none;
+}
+#masthead{
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	-webkit-box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow:    0px 1px 10px rgba(50, 50, 50, 0.5);
+	box-shadow:         0px 1px 10px rgba(50, 50, 50, 0.5);
+}
+.site{
+	padding-top: 100px;
+}
+#logo{
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+#logo img{
+	max-width: 100%;
+	max-height: 100%;
+}
+.top-menu, .nav-menu {
+	text-align: right;
+}
+.top-menu a{
+	color: #222;
+	padding: 15px 20px;
+	display: block;
+} 
+.nav-menu li a{
+	color: #03519B;
+	font-weight: 600;
+}
+.nav-menu li a:hover{
+	background-color: #FFF;
+	color: #222;
+}
+.top-menu li, .nav-menu li{
+	display: inline-block;
+	margin: 0 10px;
+}
+ul.nav-menu, ul.top-menu {
+	margin: 0;
+	padding: 0 80px 0 0;
+}
+/* Footer */
+.site-footer {
+	background-color: #272727;
+}
+.site-footer .sidebar-container{
+	background-color: #82BFF5;
+}
+.site-footer .widget a {
+	color: #222;
+	text-decoration: none;
+}
+.site-footer .widget a:hover{
+	color: #FFF;
+}
+.site-footer {
+	color: #FFF;
+}
+.site-info span.fundacao {
+	float: left;
+}
+.site-info span{
+	margin-right: 50px;
+}
+
+.logo-mupi{
+	float: right;
+}
+/* Front page */
+
+.front-page .entry-content {
+	max-width: 1040px;
+}
+.slides {
+	height: 500px;
+	overflow: hidden;
+}
