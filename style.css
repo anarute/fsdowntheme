@@ -33,8 +33,39 @@ body{
 	background: none;
 	max-width: none;
 }
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans';
+}
+
 /* Header */
 
+#breadcrumbs {
+	margin: 20px auto;
+	max-width: 1040px;
+	width: 100%;
+}
+
+.entry-header, .entry-content, .entry-summary, .entry-meta{
+	margin: 0 auto;
+	max-width: 1040px;
+	width: 100%;
+}
+.entry-thumbnail {
+	height: 210px;
+	overflow: hidden;
+}
+.entry-title{
+	margin: 0 0 5px;
+	display: inline;
+	position: relative;
+	top: -90px;
+	background-color: rgba(256,256,256,0.8);
+	padding: 4px 20px;
+	color: #03519B;
+	text-transform: uppercase;
+	font-size: 2.2em;
+	font-weight: 600;
+}
 .site-header {
 	background-color: #FFF;
 	background-image: none;
@@ -86,6 +117,25 @@ ul.nav-menu, ul.top-menu {
 	margin: 0;
 	padding: 0 80px 0 0;
 }
+
+/* Content */
+.hentry {
+	padding: 0;
+}
+
+/* Sidebar */
+.page-single .site-main .widget-area {
+	float: left;
+	width: 250px;
+}
+
+/* Page */
+.page-single .entry-header, .page-single .entry-content, 
+.page-single .entry-summary, .page-single .entry-meta {
+	max-width: 1040px;
+	padding: 0 60px 0 280px;
+}
+
 /* Footer */
 .site-footer {
 	background-color: #272727;
@@ -121,4 +171,8 @@ ul.nav-menu, ul.top-menu {
 .slides {
 	height: 500px;
 	overflow: hidden;
+}
+
+.sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta{
+	padding: 0;
 }

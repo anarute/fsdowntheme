@@ -1,31 +1,35 @@
 <?php
 /**
- * The template for front page
+ * The template for displaying all pages.
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages and that other
  * 'pages' on your WordPress site will use a different template.
  *
  * @package WordPress
- * @subpackage fsdown
- * @since Fsdown 1.0
+ * @subpackage Twenty_Thirteen
+ * @since Twenty Thirteen 1.0
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area front-page">
-		<?php echo do_shortcode("[metaslider id=37]"); ?>
+<?php get_sidebar(); ?>
+
+	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">
+			<?php if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); } ?>
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<article id="post-<?php the_ID(); ?>" <?php post_class('page-single'); ?>>
 					<header class="entry-header">
 						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 						<div class="entry-thumbnail">
-							<?php the_post_thumbnail(); ?>
+							<?php the_post_thumbnail('full'); ?>
 						</div>
 						<?php endif; ?>
+
+						<h1 class="entry-title"><?php the_title(); ?></h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
