@@ -6,11 +6,16 @@
  Author URI:     http://mupi.me
  Github Theme URI: https://github.com/anarute/fsdowntheme
  Template:       twentythirteen
- Version:        v1.0.3
+ Version:        v1.0.4
 */
 
 /* =Imports styles from the parent theme
 -------------------------------------------------------------- */
+
+/**
+  * Just versioning test purposes
+  */
+
 @import url('../twentythirteen/style.css');
 
 
