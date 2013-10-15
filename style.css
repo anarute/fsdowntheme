@@ -124,10 +124,10 @@ ul.nav-menu, ul.top-menu {
 }
 
 /* Sidebar */
-.page-single .site-main .widget-area {
+/*.page .widget-area {
 	float: left;
 	width: 250px;
-}
+}*/
 
 /* Page */
 .page-single .entry-header, .page-single .entry-content, 
