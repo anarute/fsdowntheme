@@ -42,13 +42,13 @@ class MBIFeaturedTabs_Widget extends WP_Widget {
       $bodies[$posts->post->ID] = $this->render_tab_body($posts);
     }
     
-    echo "<div id='data-tabs-widget'>";
-    echo "<ul>";
+    echo "<div id='featured-tabs-widget'>";
+    echo "<ul class='featured-tabs-menu'>";
     foreach($headers as $header){
       echo $header;
     }
     echo "</ul>";
-    echo "<div>";
+    echo "<div id='featured-tabs-content-wrapper'>";
     foreach($bodies as $body){
       echo $body;
     }
@@ -57,7 +57,7 @@ class MBIFeaturedTabs_Widget extends WP_Widget {
   } 
 
   function render_tab_header($posts){
-    $result  = "<li><a href='#tab-". $posts->post->ID . "'>";
+    $result  = "<li class='featured-tabs-menu-item'><a href='#tab-". $posts->post->ID . "'>";
     $result .= get_the_title();
     $result .= "</a></li>";
     return $result;
@@ -65,7 +65,7 @@ class MBIFeaturedTabs_Widget extends WP_Widget {
   }
   
   function render_tab_body($posts){
-    $result  = "<div id='tab-" . $posts->post->ID . "'>";
+    $result  = "<div class='featured-tabs-post' id='tab-" . $posts->post->ID . "'>";
     $result .= get_the_content();
     $result .= "</div>";
     return $result;
