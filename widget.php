@@ -1,6 +1,6 @@
 <?php
 
-class MBIDataTabs_Widget extends WP_Widget {
+class MBIFeaturedTabs_Widget extends WP_Widget {
   public function __construct() {
     parent::__construct(
       'datatabs_widget', // Base ID
@@ -9,6 +9,7 @@ class MBIDataTabs_Widget extends WP_Widget {
                                   . ' em abas', 
                                   'text_domain' ), ) // Args
     );
+    $this->mbi_enqueue_styles();
   }
 
   public function widget( $args, $instance ) {
@@ -32,7 +33,7 @@ class MBIDataTabs_Widget extends WP_Widget {
     $bodies = array();
 
     $posts = new WP_Query( array('posts_per_page' => '5' ));
-    
+
     while ($posts->have_posts()) { 
       $posts->the_post();
       // Cria um heaer
@@ -74,7 +75,11 @@ class MBIDataTabs_Widget extends WP_Widget {
   function mbi_enqueue_scripts(){
     
   }
- 
+
+  function mbi_enqueue_styles(){
+    wp_register_style( 'mbi_featured_tabs_style', get_stylesheet_directory_uri() . '/css/featured-tabs.css' );
+    wp_enqueue_style( 'mbi_featured_tabs_style');
+  }
 }
 
 ?>
