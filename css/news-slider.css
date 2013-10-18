@@ -1,0 +1,34 @@
+.news-slider-controls-wrapper {
+    float: right;
+    margin: 2px 4px;
+}
+
+#news-slider-wrapper {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.news-slider-items {
+    width: 4000px;
+}
+
+.news-slider-item {
+    position: relative;
+    width: 500px;
+    float: left;
+}
+
+.news-slider-item-title {
+    margin: 4px auto;
+}
+
+.news-slider-widget-thumbnail {
+    display: block;
+    float: left;
+}
+
+.news-slider-item-excerpt {
+    
+}
+
