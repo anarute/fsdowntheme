@@ -8,8 +8,8 @@ class MBIFeaturedTabs_Widget extends WP_Widget {
   public function __construct() {
     parent::__construct(
       'datatabs_widget', // Base ID
-      __('Conteúdo em Abas', 'text_domain'), // Name
-      array( 'description' => __( 'Widget da Home para exibir conteúdo '
+      __('Destaques em Abas', 'text_domain'), // Name
+      array( 'description' => __( 'Widget da Home para exibir destaques '
                                   . ' em abas', 
                                   'text_domain' ), ) // Args
     );
@@ -25,10 +25,12 @@ class MBIFeaturedTabs_Widget extends WP_Widget {
 
   public function form( $instance ) {
     // outputs the options form on admin
+    echo "whee!";
   }
 
   public function update( $new_instance, $old_instance ) {
     // processes widget options to be saved
+    echo "submitting";
   }
 
 
@@ -36,7 +38,9 @@ class MBIFeaturedTabs_Widget extends WP_Widget {
     $headers = array();
     $bodies = array();
 
-    $posts = new WP_Query( array('posts_per_page' => '5' ));
+    //die(print_r(get_option('sticky_posts'), true);
+
+    $posts = new WP_Query( array('post__in' => get_option('sticky_posts'), 'posts_per_page' => '4'));
 
     while ($posts->have_posts()) { 
       $posts->the_post();
@@ -110,7 +114,7 @@ class MBINewsSlider_Widget extends WP_Widget {
   public function widget( $args, $instance ) {
 
     echo $args['before_widget'];
-    echo __( $this->render(), 'text_domain' );
+    echo __( $this->news_slider_render(), 'text_domain' );
     echo $args['after_widget'];
   }
 
@@ -123,7 +127,7 @@ class MBINewsSlider_Widget extends WP_Widget {
   }
 
 
-  function render (){
+  function news_slider_render (){
     $news = array();
 
     $posts = new WP_Query( array(
