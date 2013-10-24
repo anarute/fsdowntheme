@@ -57,5 +57,20 @@ jQuery(document).ready(function(){
     function getPropertyValue(v){
         return "auto" == v ? 0 : parseInt(v, 10);
     }
+
+
+
+    // vir, tentei separar os scripts mas comecei a gastar um tempinho descobrindo como fazer isso
+    // então resolvi colocar aqui mesmo mas é bão a gente colocar no featured-tabs.js quando puder
+
+    jQuery(".featured-tabs-post:first-child, .featured-tabs-menu li:first-child").addClass("tab-active");
+    jQuery(".featured-tabs-menu-item").click(function( event ){
+        event.preventDefault();
+        var tabid = jQuery(this).children("a").attr("href");
+        
+        jQuery(".tab-active").removeClass("tab-active");
+        jQuery(this).addClass("tab-active");
+        jQuery(tabid).addClass("tab-active");
+    });
 });
 

@@ -5,7 +5,6 @@
 
 #news-slider-wrapper {
     width: 100%;
-    height: 150px;
     overflow: hidden;
 }
 
@@ -18,17 +17,22 @@
     width: 500px;
     float: left;
 }
-
 .news-slider-item-title {
     margin: 4px auto;
 }
 
-.news-slider-widget-thumbnail {
-    display: block;
-    float: left;
+a.news-slider-item-link-read-more{
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    background-color: #03519B;
+    font-weight: bold;
+    color: #FFF !important;
+    padding: 2px 5px !important;
+    text-decoration: none !important;
 }
-
 .news-slider-item-excerpt {
-    
+    padding: 0 5px;
+    min-height: 150px;
 }
 

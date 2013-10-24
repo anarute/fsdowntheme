@@ -44,4 +44,44 @@ function mbi_fsdown_theme_init(){
   }
 }
 
+/***
+ *  Adding page builder support for visual style
+ */
+
+function fsdown_panels_row_styles($styles) {
+    $styles['wide-blue'] = __('Wide Blue', 'fsdowntheme');
+    return $styles;
+}
+add_filter('siteorigin_panels_row_styles', 'fsdown_panels_row_styles');
+
+
+/***
+ *  Registering noticias scroll sidebar
+ */
+
+register_sidebar(array(
+  'name' => __( 'Noticias scroll sidebar' ),
+  'id' => 'noticias',
+  'description' => __( 'Sidebar que aparecerá na página interna de notícia' ),
+  'before_title' => '<h1>',
+  'after_title' => '</h1>'
+));
+
+/***
+* Function to get the first image of a post - used in the blog
+*/
+function catch_that_image() {
+  global $post, $posts;
+  $first_img = '';
+  ob_start();
+  ob_end_clean();
+  $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $post->post_content, $matches);
+  $first_img = $matches[1][0];
+
+  if(empty($first_img)) {
+    $first_img = "";
+  }
+  return $first_img;
+}
+
 ?>

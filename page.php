@@ -13,15 +13,15 @@
 
 get_header(); ?>
 
-<?php get_sidebar('left'); ?>
+<?php get_sidebar(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area page-single">
 		<div id="content" class="site-content" role="main">
 			<?php if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); } ?>
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class('page-single'); ?>>
+				<article id="post-<?php the_ID(); ?>">
 					<header class="entry-header">
 						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 						<div class="entry-thumbnail">
@@ -33,8 +33,10 @@ get_header(); ?>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
+						<div> <!-- para ter o fundinho branco -->
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
+						</div>
 					</div><!-- .entry-content -->
 
 					<footer class="entry-meta">

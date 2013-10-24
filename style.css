@@ -1,4 +1,4 @@
-/*
+/* 
  Theme Name:     Fsdown theme
  Theme URI:      http://mupi.me
  Description:    Tema Fundação Síndrome de Down
@@ -6,7 +6,7 @@
  Author URI:     http://mupi.me
  Github Theme URI: https://github.com/anarute/fsdowntheme
  Template:       twentythirteen
- Version:        v1.0.5
+ Version:        v1.1.0
 */
 
 /* =Imports styles from the parent theme
@@ -33,9 +33,34 @@ body{
 	background: none;
 	max-width: none;
 }
+a {
+	color: #03519B;
+}
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Open Sans';
 }
+h1 {
+	font-size: 40px;
+}
+h3{
+	font-size: 20px;
+}
+p {
+	margin: 5px 0;
+	line-height: 30px;
+	color: #333;
+}
+h2.entry-title{
+	font-size: 20px;
+	font-weight: bold;
+}
+.entry-title a{
+	color: #03519B;
+}
+.entry-content img.alignleft, .entry-content .wp-caption.alignleft {
+	margin-left: inherit;
+}
+
 
 /* Header */
 
@@ -43,6 +68,11 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 20px auto;
 	max-width: 1040px;
 	width: 100%;
+	text-transform: uppercase;
+	font-size: 13px;
+}
+#breadcrumbs a{
+	color: #03519B;
 }
 
 .entry-header, .entry-content, .entry-summary, .entry-meta{
@@ -50,15 +80,15 @@ h1, h2, h3, h4, h5, h6 {
 	max-width: 1040px;
 	width: 100%;
 }
-.entry-thumbnail {
-	height: 210px;
+.page-single .entry-thumbnail {
+	height: 170px;
 	overflow: hidden;
 }
-.entry-title{
+.page-single .entry-title{
 	margin: 0 0 5px;
 	display: inline;
 	position: relative;
-	top: -90px;
+	top: -70px;
 	background-color: rgba(256,256,256,0.8);
 	padding: 4px 20px;
 	color: #03519B;
@@ -66,15 +96,17 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 2.2em;
 	font-weight: 600;
 }
-.site-header {
+.page-single .site-header {
 	background-color: #FFF;
 	background-image: none;
 }
+
 .navbar {
 	background: none;
 }
 #masthead{
 	position: fixed;
+	background-color: #FFF;
 	width: 100%;
 	z-index: 100;
 	-webkit-box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.5);
@@ -123,19 +155,37 @@ ul.nav-menu, ul.top-menu {
 	padding: 0;
 }
 
-/* Sidebar */
-/*.page .widget-area {
-	float: left;
-	width: 250px;
-}*/
-
 /* Page */
-.page-single .entry-header, .page-single .entry-content, 
-.page-single .entry-summary, .page-single .entry-meta {
+#page .page-single .entry-header, #page .page-single .entry-content, 
+#page .page-single .entry-summary, #page .page-single .entry-meta {
 	max-width: 1040px;
-	padding: 0 60px 0 280px;
+	padding: 0 60px 0 260px;
+}
+#page .page-single .entry-content div{
+	background-color: rgba(256,256,256,0.6);
+	padding: 10px;
+}
+#page .page-single .entry-thumbnail{
+	padding-left: 60px;	
 }
 
+/* Single post */
+.post-single .entry-title {
+	color: #03519B;
+}
+.post-single #content .entry-content {
+	padding-top: 10px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #ccc;
+}
+.entry-meta a{
+	color: #03519B;
+}
+.sidebar-noticias .widget-wrapper{
+	width: 1040px;
+	margin: 0 auto;
+	list-style: none;
+}
 /* Footer */
 .site-footer {
 	background-color: #272727;
@@ -175,4 +225,87 @@ ul.nav-menu, ul.top-menu {
 
 .sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta{
 	padding: 0;
+}
+
+/* Home */
+.excerpt-wrapper h2.entry-title{
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0;
+}
+.excerpt-wrapper .entry-summary p{
+	margin: 0;
+}
+/* Thumbnails from slider widget and news summary posts */
+.news-slider-widget-thumbnail {
+    display: block;
+    float: left; 
+    border: 4px solid #fff;
+}
+.news-slider-widget-thumbnail, .thumbnail-wrapper {
+    -webkit-box-shadow: 0px 0px 3px rgba(50, 50, 50, 0.62);
+    -moz-box-shadow:    0px 0px 3px rgba(50, 50, 50, 0.62);
+    box-shadow:         0px 0px 3px rgba(50, 50, 50, 0.62);
+    border: 2px solid #fff;
+    margin-right: 10px;
+    margin-left: 3px;
+}
+.thumbnail-wrapper {
+	width: 65px;
+	height: 50px;
+	display: inline-block;
+	overflow: hidden;
+	margin-bottom: -6px;
+}
+.excerpt-wrapper{
+	display: inline-block;
+	font-size: 14px;
+}
+.news-post{
+	width: 1040px;
+	margin: 25px auto;
+}
+/* Widgets */
+
+.widget{
+	background: none;
+}
+.widget a{
+	color: #03519B;
+}
+.site-main .widget-area {
+	float: left;
+	width: 260px;
+}
+.panel-row-style-wide-blue {
+  background: #BDDCF8;
+  border-top: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  margin: 0 -1000px;
+  padding: 25px 1000px 25px 1000px;
+}
+/*.panel-row-style-wide-blue:after {
+	clear: both;
+	opacity: 0;
+}*/
+.layout-full .panel-row-style-wide-blue {
+  margin: 0 -1000px;
+  padding: 25px 1000px 25px 1000px;
+}
+.widget-title.new-slider-widget-title {
+	color: #bc360a;
+	float: left;
+}
+
+.widget_newsslider_widget, .widget_datatabs_widget {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.sidebar-noticias {
+	background: rgba(256,256,256,0.5);
+	border-top: 1px solid #ddd;
+	overflow: hidden;
+}
+.widget-wrapper h2{
+	display: none;
 }

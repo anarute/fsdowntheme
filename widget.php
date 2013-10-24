@@ -67,6 +67,7 @@ class MBIFeaturedTabs_Widget extends WP_Widget {
 
   function render_tab_header($posts){
     $result  = "<li class='featured-tabs-menu-item'><a href='#tab-". $posts->post->ID . "'>";
+    $result .= get_the_post_thumbnail( $posts->post->ID , array(40,40) );
     $result .= get_the_title();
     $result .= "</a></li>";
     return $result;
@@ -142,7 +143,7 @@ class MBINewsSlider_Widget extends WP_Widget {
       // Cria um item de notícia
       $news[$posts->post->ID] = $this->render_news_item($posts);
     }
-    echo "<h3 class='widget-title new-slider-widget-title'>Notícias</h3>";
+    echo "<h2 class='widget-title new-slider-widget-title'>Notícias</h2>";
     echo "<div id='news-slider-widget'>";
     echo "<div class='news-slider-controls-wrapper'>";
     echo "<a id='news-slider-slide-left' href='#slide-left'><</a> &nbsp; ";
@@ -161,6 +162,7 @@ class MBINewsSlider_Widget extends WP_Widget {
   function render_news_item($posts){
     $thumb_options = array(
       'class' => 'news-slider-widget-thumbnail',
+
     );
       
     $result  = "<li class='news-slider-item'>";
@@ -170,7 +172,7 @@ class MBINewsSlider_Widget extends WP_Widget {
     $result .= get_the_title() . "</a>";
     $result .= "</h3>";
     $result .= get_the_post_thumbnail($posts->post->ID, 
-                                      'news-slider', 
+                                      'thumbnail', 
                                       $thumb_options);
     $result .= "<div class='news-slider-item-excerpt'>" 
       . get_the_excerpt() . "</div>";

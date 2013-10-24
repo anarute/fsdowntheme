@@ -23,7 +23,39 @@ get_header(); ?>
 		
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				<?php get_template_part( 'content', get_post_format() ); ?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class( 'news-post' ); ?>>
+					<?php
+						if ( get_the_post_thumbnail($post_id) != '' ) {
+
+						  echo '<a href="'; the_permalink(); echo '" class="thumbnail-wrapper">';
+						   the_post_thumbnail();
+						  echo '</a>';
+
+						} else {
+
+						 echo '<a href="'; the_permalink(); echo '" class="thumbnail-wrapper">';
+						 echo '<img src="';
+						 echo catch_that_image();
+						 echo '" alt="" />';
+						 echo '</a>';
+
+						}
+					?>
+					<div class="excerpt-wrapper">
+						<header class="entry-header">
+
+							<h2 class="entry-title">
+								<a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
+							</h2>
+						</header><!-- .entry-header -->
+
+						<div class="entry-summary">
+							<?php the_excerpt(); ?>
+						</div>
+					</div>
+					
+				</article><!-- #post -->
+
 			<?php endwhile; ?>
 
 			<?php twentythirteen_paging_nav(); ?>
@@ -35,5 +67,4 @@ get_header(); ?>
 		</div><!-- #content -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
