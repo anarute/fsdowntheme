@@ -10,14 +10,17 @@ function mbi_excerpt_length( $length ) {
 
 add_filter( 'excerpt_length', 'mbi_excerpt_length', 999 );
 
-add_action( 'widgets_init', function(){
-    register_widget( 'MBIFeaturedTabs_Widget' );
-  });
+add_action( 'widgets_init', mbi_featured_tabs_register()); //function(){
 
-add_action( 'widgets_init', function(){
+add_action( 'widgets_init', mbi_news_slider_register());
+
+function mbi_news_slider_register(){
     register_widget( 'MBINewsSlider_Widget' );
-  });
+}
 
+function mbi_featured_tabs_register(){
+    register_widget( 'MBIFeaturedTabs_Widget' );
+}
 
 /***
  * Stuff to run when theme is activated
