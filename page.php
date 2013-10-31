@@ -23,11 +23,15 @@ get_header(); ?>
 
 				<article id="post-<?php the_ID(); ?>">
 					<header class="entry-header">
-						<?php if ( has_post_thumbnail() && ! post_password_required() ) : ?>
 						<div class="entry-thumbnail">
+
+						<?php if ( has_post_thumbnail() && ! post_password_required() ) { ?>				
 							<?php the_post_thumbnail('full'); ?>
+						<?php } else { ?>
+							<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/header-generico.jpg"/>
+						<?php }; ?>
+
 						</div>
-						<?php endif; ?>
 
 						<h1 class="entry-title"><?php the_title(); ?></h1>
 					</header><!-- .entry-header -->
