@@ -57,6 +57,12 @@ function fsdown_panels_row_styles($styles) {
 }
 add_filter('siteorigin_panels_row_styles', 'fsdown_panels_row_styles');
 
+function fsdown_panels_row_styles_wide($styles) {
+    $styles['wide'] = __('Wide', 'fsdowntheme');
+    return $styles;
+}
+add_filter('siteorigin_panels_row_styles', 'fsdown_panels_row_styles_wide');
+
 
 /***
  *  Registering noticias scroll sidebar
@@ -70,6 +76,13 @@ register_sidebar(array(
   'after_title' => '</h1>'
 ));
 
+register_sidebar(array(
+  'name' => __( 'Slider home' ),
+  'id' => 'home',
+  'description' => __( 'Sidebar para inserir o slider na home' ),
+  'before_title' => '<h1>',
+  'after_title' => '</h1>'
+));
 /***
 * Function to get the first image of a post - used in the blog
 */

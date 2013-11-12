@@ -13,8 +13,10 @@
 
 get_header(); ?>
 
+	<?php get_sidebar( 'home' ); ?>
+
 	<div id="primary" class="content-area front-page">
-		<?php echo do_shortcode("[metaslider id=37]"); ?>
+		
 		<div id="content" class="site-content" role="main">
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
