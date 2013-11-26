@@ -43,7 +43,7 @@ h1 {
 	font-size: 40px;
 }
 h3{
-	font-size: 20px;
+	font-size: 18px;
 }
 p {
 	margin: 5px 0;
@@ -177,8 +177,7 @@ ul.nav-menu, ul.top-menu {
 }
 .post-single #content .entry-content {
 	padding-top: 10px;
-	margin-bottom: 30px;
-	border-bottom: 1px solid #ccc;
+	margin-bottom: 15px;
 }
 .entry-meta a{
 	color: #03519B;
@@ -288,24 +287,18 @@ ul.nav-menu, ul.top-menu {
   border-top: 1px solid #DDDDDD;
   border-bottom: 1px solid #DDDDDD;
   margin: 0 -1000px;
-  padding: 25px 1000px 25px 1000px;
+  padding: 10px 1000px;
 }
-
-.layout-full .panel-row-style-wide-blue {
-  margin: 0 -1000px;
-  padding: 25px 1000px 25px 1000px;
-}
-
 
 /* Faixa que ocupa todo o espaço para o page builder */
 .panel-row-style-wide {
   margin: 0 -1000px;
-  padding: 25px 1000px 25px 1000px;
+  padding: 5px;
 }
 
-.layout-full .panel-row-style-wide {
+.layout-full .panel-row-style-wide, .layout-full .panel-row-style-wide-blue {
   margin: 0 -1000px;
-  padding: 25px 1000px 25px 1000px;
+  padding: 10px 1000px;
 }
 
 .widget-title.new-slider-widget {
@@ -325,4 +318,30 @@ ul.nav-menu, ul.top-menu {
 }
 .widget-wrapper h2{
 	display: none;
+}
+
+
+/* Newsletter form */
+.wysija-paragraph input{
+	width: 80%;
+}
+
+button, input[type="submit"], input[type="button"], input[type="reset"]{
+background: #50A652;
+border: none;
+border-bottom: 3px solid #3E7F3F;
+padding: 8px 24px 8px;
+}
+
+button:hover, input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover{
+background: #4A994C;
+border: none;
+border-bottom: 3px solid #3E7F3F;
+padding: 8px 24px 8px;
+}
+button:active, input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active{
+background: #4A994C;
+border: none;
+border-top: 3px solid #3E7F3F;
+padding: 8px 24px 8px;
 }

@@ -40,7 +40,7 @@ class MBIFeaturedTabs_Widget extends WP_Widget {
 
     //die(print_r(get_option('sticky_posts'), true);
 
-    $posts = new WP_Query( array('post__in' => get_option('sticky_posts'), 'posts_per_page' => '4'));
+    $posts = new WP_Query( array('post_type' => 'aba', 'posts_per_page' => '4'));
 
     while ($posts->have_posts()) { 
       $posts->the_post();

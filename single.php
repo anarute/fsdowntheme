@@ -10,7 +10,16 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area post-single">
-		<?php if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); } ?>
+
+		<?php if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(array(
+			  'excluded_taxonomies' => array(
+			    'category'
+			  )
+			  
+			)); } 
+		?>
+
+
 		<div id="content" class="site-content" role="main">
 
 			<?php /* The loop */ ?>
@@ -28,7 +37,7 @@ get_header(); ?>
 						<?php endif; // is_single() ?>
 
 						<div class="entry-meta">
-							<?php twentythirteen_entry_meta(); ?>
+							<?php the_date(); ?>
 							<?php edit_post_link( __( 'Edit', 'twentythirteen' ), '<span class="edit-link">', '</span>' ); ?>
 						</div><!-- .entry-meta -->
 					</header><!-- .entry-header -->

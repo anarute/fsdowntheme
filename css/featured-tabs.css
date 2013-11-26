@@ -13,7 +13,7 @@
 	padding: 0;
 }
 li.featured-tabs-menu-item a{
-	color: #03519B;
+	color: #0464BF;
 	text-decoration: none;
 	padding: 10px 15px;
 	display: block;
@@ -27,7 +27,8 @@ li.featured-tabs-menu-item a img{
 	margin: 5px;
 }
 li.featured-tabs-menu-item a:hover{
-	background-color: #e5e5e5;
+	color: #034482;
+	background-color: #f0f0f0;
 }
 #featured-tabs-content-wrapper{
 	position: relative;
@@ -49,5 +50,6 @@ div.tab-active{
     height: auto;
 }
 li.tab-active a{
-	background-color: #e5e5e5;
+	color: #034482;
+	background-color: #f0f0f0;
 }

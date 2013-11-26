@@ -36,3 +36,6 @@ a.news-slider-item-link-read-more{
     min-height: 150px;
 }
 
+.widget_newsslider_widget > h2 {
+    position: absolute;
+}

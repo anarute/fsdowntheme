@@ -17,7 +17,13 @@ get_header(); ?>
 
 	<div id="primary" class="content-area page-single">
 		<div id="content" class="site-content" role="main">
-			<?php if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(); } ?>
+			<?php if (function_exists('HAG_Breadcrumbs')) { HAG_Breadcrumbs(array(
+			  'excluded_taxonomies' => array(
+			    'category'
+			  )
+			  
+			)); } 
+			?>
 			<?php /* The loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
