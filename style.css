@@ -210,9 +210,24 @@ ul.nav-menu, ul.top-menu {
 .site-info span{
 	margin-right: 50px;
 }
-
 .logo-mupi{
 	float: right;
+}
+#colophon .widget-area{
+	max-width: inherit;
+	left: auto;
+	width: 1040px;
+}
+#colophon .widget{
+	float: left;
+	width: 25%;
+	margin: 0;
+	padding: 10px;
+	list-style: none;
+}
+.site-footer h1{
+	font-size: 16px;
+	margin: 0;
 }
 /* Front page */
 

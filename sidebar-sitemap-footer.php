@@ -9,10 +9,10 @@
  * @since Twenty Thirteen 1.0
  */
 
-if ( is_active_sidebar( 'sidebar-footer' ) ) : ?>
+if ( is_active_sidebar( 'sitemap-footer' ) ) : ?>
 	<div id="secondary" class="sidebar-container" role="complementary">
 		<div class="widget-area">
-			<?php dynamic_sidebar( 'sidebar--footer' ); ?>
+			<?php dynamic_sidebar( 'sitemap-footer' ); ?>
 		</div><!-- .widget-area -->
 	</div><!-- #secondary -->
 <?php endif; ?>

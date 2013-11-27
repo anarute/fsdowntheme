@@ -83,6 +83,15 @@ register_sidebar(array(
   'before_title' => '<h1>',
   'after_title' => '</h1>'
 ));
+
+register_sidebar(array(
+  'name' => __( 'Sitemap footer' ),
+  'id' => 'sitemap-footer',
+  'description' => __( 'Sitemap que é exibido no footer' ),
+  'before_title' => '<h1>',
+  'after_title' => '</h1>'
+));
+
 /***
 * Function to get the first image of a post - used in the blog
 */
