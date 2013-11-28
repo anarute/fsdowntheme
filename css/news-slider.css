@@ -9,12 +9,12 @@
 }
 
 .news-slider-items {
-    width: 4000px;
+    width: 500%;
 }
 
 .news-slider-item {
     position: relative;
-    width: 500px;
+    width: 10%;
     float: left;
 }
 .news-slider-item-title {
