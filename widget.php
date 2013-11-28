@@ -71,12 +71,15 @@ class MBIFeaturedTabs_Widget extends WP_Widget {
     $result .= get_the_title();
     $result .= "</a></li>";
     return $result;
-
   }
   
   function render_tab_body($posts){
+    $content = apply_filters('the_content', get_the_content());
+    $content = str_replace(']]>', ']]&gt;', $content);
+
     $result  = "<div class='featured-tabs-post' id='tab-" . $posts->post->ID . "'>";
-    $result .= get_the_content();
+    //$result .= get_the_content();
+    $result .= $content;
     $result .= "</div>";
     return $result;
   }
