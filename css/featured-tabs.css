@@ -35,21 +35,21 @@ li.featured-tabs-menu-item a:hover{
 	min-height: 300px;
 }
 .featured-tabs-post{
-	display: block;
+    display: block;
     -webkit-transition: opacity 0.3s ease-out;
     transition: opacity 0.3s ease-out;
-    opacity: 0; 
+    opacity: 0;
     height: 0;
     overflow: hidden;
-    padding: 20px;
-    position: absolute;
     top: 0;
+    margin:0
 }
 div.tab-active{
-	opacity: 1;
+    opacity: 1;
     height: auto;
+    padding: 20px;
 }
 li.tab-active a{
-	color: #034482;
-	background-color: #f0f0f0;
+    color: #034482;
+    background-color: #f0f0f0;
 }
