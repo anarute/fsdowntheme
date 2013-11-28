@@ -32,7 +32,7 @@ li.featured-tabs-menu-item a:hover{
 }
 #featured-tabs-content-wrapper{
 	position: relative;
-	height: 300px;
+	min-height: 300px;
 }
 .featured-tabs-post{
 	display: block;
