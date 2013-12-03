@@ -316,9 +316,13 @@ ul.nav-menu, ul.top-menu {
   padding: 10px 1000px;
 }
 
+div.panel-grid-simple {
+    margin: auto;    
+}
+
 .widget-title.new-slider-widget {
-	color: #bc360a;
-	float: left;
+    color: #bc360a;
+    float: left;
 }
 
 

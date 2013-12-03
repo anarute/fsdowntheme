@@ -22,6 +22,25 @@ function mbi_featured_tabs_register(){
     register_widget( 'MBIFeaturedTabs_Widget' );
 }
 
+
+add_filter('siteorigin_panels_row_classes', 'siteorigin_panels_row_classes');
+
+/** Adding filter to grid class */
+function siteorigin_panels_row_classes ($grid_classes){
+  global $post;
+  
+  $panels_data = get_post_meta( $post->ID, 'panels_data', true );
+  $panels_data = apply_filters( 'siteorigin_panels_data', $panels_data, $post->ID );
+  if(!empty($panels_data)){
+    $grid_class = 'panel-grid-' . $panels_data['grids'][0]['style'];
+    $grid_classes = array_merge($grid_classes, array($grid_class));
+    return $grid_classes;
+  } else {
+    return $grid_classes;
+  }
+}
+
+
 /***
  * Stuff to run when theme is activated
  */
@@ -53,6 +72,8 @@ function mbi_fsdown_theme_init(){
 
 function fsdown_panels_row_styles($styles) {
     $styles['wide-blue'] = __('Wide Blue', 'fsdowntheme');
+    $styles['simple'] = __('Simple', 'fsdowntheme');
+    $styles['double'] = __('Double', 'fsdowntheme');
     return $styles;
 }
 add_filter('siteorigin_panels_row_styles', 'fsdown_panels_row_styles');
