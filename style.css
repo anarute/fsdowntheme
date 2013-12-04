@@ -6,7 +6,7 @@
  Author URI:     http://mupi.me
  Github Theme URI: https://github.com/anarute/fsdowntheme
  Template:       twentythirteen
- Version:        v1.1.6
+ Version:        v1.1.7
 */
 
 /* =Imports styles from the parent theme
@@ -163,10 +163,15 @@ ul.nav-menu, ul.top-menu {
 	max-width: 1040px;
 	padding: 0 60px 0 260px;
 }
-#page .page-single .entry-content div{
-	background-color: rgba(256,256,256,0.6);
-	padding: 10px;
+
+#page .page-single .entry-content div {
+    padding: 10px;
 }
+
+#page .page-single .entry-content > div{
+    background-color: rgba(256,256,256,0.6);
+}
+
 #page .page-single .entry-thumbnail{
 	padding-left: 60px;	
 }
