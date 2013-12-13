@@ -174,9 +174,9 @@ class MBINewsSlider_Widget extends WP_Widget {
       . get_permalink() . "'>";
     $result .= get_the_title() . "</a>";
     $result .= "</h3>";
-    $result .= get_the_post_thumbnail($posts->post->ID, 
+    /*$result .= get_the_post_thumbnail($posts->post->ID, 
                                       'thumbnail', 
-                                      $thumb_options);
+                                      $thumb_options);*/
     $result .= "<div class='news-slider-item-excerpt'>" 
       . get_the_excerpt() . "</div>";
     $result .= "<div class='news-slider-item-read-all'>";

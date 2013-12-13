@@ -6,7 +6,7 @@
  Author URI:     http://mupi.me
  Github Theme URI: https://github.com/anarute/fsdowntheme
  Template:       twentythirteen
- Version:        v1.1.7
+ Version:        v1.1.8
 */
 
 /* =Imports styles from the parent theme
@@ -80,11 +80,11 @@ h2.entry-title{
 	max-width: 1040px;
 	width: 100%;
 }
-.page-single .entry-thumbnail {
+.page-single .entry-thumbnail, .page-wide .entry-thumbnail {
 	height: 170px;
 	overflow: hidden;
 }
-.page-single .entry-title{
+.page-single .entry-title, .page-wide .entry-title{
 	margin: 0 0 5px;
 	display: inline;
 	position: relative;
@@ -136,6 +136,7 @@ h2.entry-title{
 .nav-menu li a{
 	color: #03519B;
 	font-weight: 600;
+	font-size: 17px;
 }
 .nav-menu li a:hover{
 	background-color: #FFF;
@@ -164,11 +165,11 @@ ul.nav-menu, ul.top-menu {
 	padding: 0 60px 0 260px;
 }
 
-#page .page-single .entry-content div {
+#page .page-single .entry-content div, .page-wide .entry-content div {
     padding: 10px;
 }
 
-#page .page-single .entry-content > div{
+#page .page-single .entry-content > div, .page-wide .entry-content > div{
     background-color: rgba(256,256,256,0.6);
 }
 
@@ -239,10 +240,6 @@ ul.nav-menu, ul.top-menu {
 .front-page .entry-content {
 	max-width: 1040px;
 }
-.slides {
-	height: 500px;
-	overflow: hidden;
-}
 
 .sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta{
 	padding: 0;
@@ -256,6 +253,12 @@ ul.nav-menu, ul.top-menu {
 }
 .excerpt-wrapper .entry-summary p{
 	margin: 0;
+}
+.slogan {
+	float: left;
+	font-style: italic;
+	width: 266px;
+	margin-top: 10px;
 }
 /* Thumbnails from slider widget and news summary posts */
 .news-slider-widget-thumbnail {
@@ -292,6 +295,7 @@ ul.nav-menu, ul.top-menu {
 	background: none;
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 .widget a{
 	color: #03519B;
