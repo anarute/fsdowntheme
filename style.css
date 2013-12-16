@@ -6,7 +6,7 @@
  Author URI:     http://mupi.me
  Github Theme URI: https://github.com/anarute/fsdowntheme
  Template:       twentythirteen
- Version:        v1.1.8
+ Version:        v1.1.9
 */
 
 /* =Imports styles from the parent theme
@@ -105,16 +105,12 @@ h2.entry-title{
 	background: none;
 }
 #masthead{
-	position: fixed;
 	background-color: #FFF;
 	width: 100%;
 	z-index: 100;
-	-webkit-box-shadow: 0px 1px 10px rgba(50, 50, 50, 0.5);
-	-moz-box-shadow:    0px 1px 10px rgba(50, 50, 50, 0.5);
-	box-shadow:         0px 1px 10px rgba(50, 50, 50, 0.5);
-}
-.site{
-	padding-top: 100px;
+	-webkit-box-shadow: 0px 1px 8px rgba(50, 50, 50, 0.2);
+	-moz-box-shadow:    0px 1px 8px rgba(50, 50, 50, 0.2);
+	box-shadow:         0px 1px 8px rgba(50, 50, 50, 0.2);
 }
 #logo{
 	float: left;
@@ -125,18 +121,26 @@ h2.entry-title{
 	max-width: 100%;
 	max-height: 100%;
 }
+#menu-principal {
+	padding: 0;
+	clear: both;
+	text-align: center;
+	border-top: 1px solid #EDF2F7;
+	text-transform: uppercase;
+}
 .top-menu, .nav-menu {
 	text-align: right;
 }
 .top-menu a{
 	color: #222;
-	padding: 15px 20px;
+	padding: 12px 8px;
 	display: block;
+	font-size: 14px;
 } 
 .nav-menu li a{
 	color: #03519B;
 	font-weight: 600;
-	font-size: 17px;
+	font-size: 18px;
 }
 .nav-menu li a:hover{
 	background-color: #FFF;
@@ -144,7 +148,7 @@ h2.entry-title{
 }
 .top-menu li, .nav-menu li{
 	display: inline-block;
-	margin: 0 10px;
+	margin: 0;
 }
 ul.nav-menu, ul.top-menu {
 	margin: 0;
@@ -257,8 +261,10 @@ ul.nav-menu, ul.top-menu {
 .slogan {
 	float: left;
 	font-style: italic;
-	width: 266px;
-	margin-top: 10px;
+	width: 300px;
+	margin-top: 20px;
+	font-size: 20px;
+	/*color: #F56933;*/
 }
 /* Thumbnails from slider widget and news summary posts */
 .news-slider-widget-thumbnail {
@@ -372,4 +378,28 @@ background: #4A994C;
 border: none;
 border-top: 3px solid #3E7F3F;
 padding: 8px 24px 8px;
+}
+
+/* Como ajudar */
+.como-ajudar{
+}
+.como-ajudar-mini {
+	float: left;
+	width: 45%;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	margin: 0 2.5%;
+}
+.como-ajudar-mini h2{
+	font-size: 20px;
+	margin: 12px 0;
+}
+.img-comoajudar {
+	float: left;
+	width: 150px;
+}
+.como-ajudar-menu {
+	float: left;
+	margin: 0;
+	list-style: initial;
 }

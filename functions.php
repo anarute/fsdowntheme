@@ -2,6 +2,9 @@
 
 register_nav_menu( 'menu-topo', 'Menu superior' );
 
+register_nav_menu( 'como-ajudar-pf', 'Como ajudar pessoa física' );
+register_nav_menu( 'como-ajudar-pj', 'Como ajudar pessoa jurídica' );
+
 include get_stylesheet_directory() . '/widget.php';
 
 function mbi_excerpt_length( $length ) {

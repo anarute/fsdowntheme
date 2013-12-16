@@ -37,10 +37,10 @@
 				<a id="logo" href="<?php echo home_url(); ?>" title="Fundação Síndrome de Down">
 					<?php echo do_shortcode('[site_logo]'); ?>
 				</a>
-				<span class="slogan">Inclusão não é para maioria. Inclusão é total.</span>
+				<span class="slogan">Inclusão não é para maioria.<br/> Inclusão é total.</span>
 				<h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
 				<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
-				<div class="nav-menus">
+				
 				<?php wp_nav_menu( array( 'theme_location' => 'menu-topo', 
 											'menu_class' => 'top-menu' ,
 											'container'    => '' 
@@ -49,7 +49,7 @@
 											'menu_class'   => 'nav-menu',
 											'container'    => ''
 										) ); ?>
-				</div>
+				
 				<?php get_search_form(); ?>
 			</nav><!-- #site-navigation -->
 		</div><!-- #navbar -->
