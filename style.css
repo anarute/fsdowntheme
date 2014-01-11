@@ -176,6 +176,8 @@ ul.nav-menu, ul.top-menu {
 #site-navigation .sidebar-sociais{
 	float: right;
 }
+
+div.rybena { float: right; }
 /* Content */
 .hentry {
 	padding: 0;
