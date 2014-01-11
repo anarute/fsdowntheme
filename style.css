@@ -6,7 +6,7 @@
  Author URI:     http://mupi.me
  Github Theme URI: https://github.com/anarute/fsdowntheme
  Template:       twentythirteen
- Version:        v1.1.9
+ Version:        v1.1.10
 */
 
 /* =Imports styles from the parent theme
@@ -137,10 +137,25 @@ h2.entry-title{
 	display: block;
 	font-size: 14px;
 } 
+.nav-menu > li:first-child a{
+border-radius: 5px 0 0 5px;
+}
+.nav-menu > li:last-child a{
+border-radius: 0 5px 5px 0;
+}
 .nav-menu li a{
 	color: #03519B;
 	font-weight: 600;
 	font-size: 18px;
+	margin-right: -3px;
+	background: #b2dbff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #b2dbff 0%, #6492b7 99%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b2dbff), color-stop(99%,#6492b7)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #b2dbff 0%,#6492b7 99%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #b2dbff 0%,#6492b7 99%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #b2dbff 0%,#6492b7 99%); /* IE10+ */
+	background: linear-gradient(to bottom,  #b2dbff 0%,#6492b7 99%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b2dbff', endColorstr='#6492b7',GradientType=0 ); /* IE6-9 */
 }
 .nav-menu li a:hover{
 	background-color: #FFF;
@@ -156,6 +171,10 @@ ul.nav-menu, ul.top-menu {
 }
 .clearfix{
 	clear: both;
+}
+
+#site-navigation .sidebar-sociais{
+	float: right;
 }
 /* Content */
 .hentry {
@@ -203,6 +222,9 @@ ul.nav-menu, ul.top-menu {
 }
 .site-footer .sidebar-container{
 	background-color: #82BFF5;
+}
+.contato-footer .widget-area{
+	border-top: 1px solid #ccc;
 }
 .site-footer .widget a {
 	color: #222;
@@ -335,6 +357,11 @@ div.panel-grid-simple {
     margin: auto;    
 }
 
+div.panel-grid-no-vertical-space {
+    margin: 0 auto !important;
+    padding: 2px !important;
+}
+
 .widget-title.new-slider-widget {
     color: #bc360a;
     float: left;
@@ -396,7 +423,7 @@ padding: 8px 24px 8px;
 }
 .img-comoajudar {
 	float: left;
-	width: 150px;
+	width: 125px;
 }
 .como-ajudar-menu {
 	float: left;

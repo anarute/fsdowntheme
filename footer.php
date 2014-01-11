@@ -16,8 +16,12 @@
 	</div><!-- #page -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<?php get_sidebar( 'sitemap-footer' ); ?>
 
+		<div class="footer-topo">
+			<?php get_sidebar( 'sitemap-footer' ); ?>
+
+			<?php get_sidebar( 'contato-footer' ); ?>
+		</div>
 		<div class="site-info">
 			<span class="fundacao">2013 - Fundação Síndrome de Down</span>
 			<span>fsdown@fsdown.org.br</span>

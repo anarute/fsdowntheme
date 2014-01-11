@@ -101,6 +101,14 @@ register_sidebar(array(
 ));
 
 register_sidebar(array(
+  'name' => __( 'Icones de redes sociais' ),
+  'id' => 'sociais',
+  'description' => __( 'Sidebar que contém os ícones das redes sociais' ),
+  'before_title' => '<h1>',
+  'after_title' => '</h1>'
+));
+
+register_sidebar(array(
   'name' => __( 'Slider home' ),
   'id' => 'home',
   'description' => __( 'Sidebar para inserir o slider na home' ),
@@ -115,7 +123,13 @@ register_sidebar(array(
   'before_title' => '<h1>',
   'after_title' => '</h1>'
 ));
-
+register_sidebar(array(
+  'name' => __( 'Contato' ),
+  'id' => 'contato-footer',
+  'description' => __( 'Contato exibido no footer' ),
+  'before_title' => '<h1>',
+  'after_title' => '</h1>'
+));
 /***
 * Function to get the first image of a post - used in the blog
 */
