@@ -1,10 +1,10 @@
 <?php
 /*
-Template Name: Como ajudar
+Template Name: Como ajudar interna
 */
 
 /**
- * The template for displaying pages without sidebar.
+ * The template for displaying "como ajudar" intern pages
  *
  * @package WordPress
  * @subpackage Twenty_Thirteen
@@ -37,7 +37,7 @@ get_header(); ?>
 
 						</div>
 
-						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<h1 class="entry-title">Como ajudar</h1>
 					</header><!-- .entry-header -->
 
 					<div class="entry-content">
@@ -72,7 +72,10 @@ get_header(); ?>
 								</div>
 							</div>
 							<div style="clear: both;"></div>
-							
+							<div class="como-ajudar-content">
+								<h2><?php the_title(); ?></h2>
+								<?php the_content(); ?>
+							</div>
 							<?php wp_link_pages( array( 'before' => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'twentythirteen' ) . '</span>', 'after' => '</div>', 'link_before' => '<span>', 'link_after' => '</span>' ) ); ?>
 						</div>
 					</div><!-- .entry-content -->

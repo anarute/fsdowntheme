@@ -6,7 +6,7 @@
  Author URI:     http://mupi.me
  Github Theme URI: https://github.com/anarute/fsdowntheme
  Template:       twentythirteen
- Version:        v1.1.11
+ Version:        v1.1.12
 */
 
 /* =Imports styles from the parent theme
@@ -28,6 +28,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	background: url('images/dust.png');
 	overflow-x: hidden;
+	font-size: 14px;
 }
 .site{
 	background: none;
@@ -41,6 +42,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
 	font-size: 40px;
+}
+h2 {
+	font-size: 1.5em;
+	margin: 15px 0;
 }
 h3{
 	font-size: 18px;
@@ -93,7 +98,7 @@ h2.entry-title{
 	padding: 4px 20px;
 	color: #03519B;
 	text-transform: uppercase;
-	font-size: 2.2em;
+	font-size: 2em;
 	font-weight: 600;
 }
 .page-single .site-header {
@@ -113,19 +118,32 @@ h2.entry-title{
 	box-shadow:         0px 1px 8px rgba(50, 50, 50, 0.2);
 }
 #logo{
-	float: left;
-	width: 100px;
-	height: 100px;
+   float: left;
+    height: 90px;
+    margin-top: 10px;
 }
-#logo img{
-	max-width: 100%;
-	max-height: 100%;
+.lnk_fazemos{
+text-align: center;
+}
+.lnk_fazemos a{
+margin: 0 auto;
+  font-size: 1.2em;
+display: block;
+max-width: 200px;
+}
+.img_fazemos{
+height: 127px;
+overflow: hidden;
+display: block;
+text-align: center;
+border-radius: 6px;
+margin: 0 auto;
+width: 200px;
 }
 #menu-principal {
 	padding: 0;
 	clear: both;
 	text-align: center;
-	border-top: 1px solid #EDF2F7;
 	text-transform: uppercase;
 }
 .top-menu, .nav-menu {
@@ -190,7 +208,7 @@ div.rybena { float: right; }
 	padding: 0 60px 0 260px;
 }
 
-#page .page-single .entry-content div, .page-wide .entry-content div {
+#page .page-single .entry-content div, .page-wide .entry-content > div {
     padding: 10px;
 }
 
@@ -221,9 +239,11 @@ div.rybena { float: right; }
 /* Footer */
 .site-footer {
 	background-color: #272727;
+	color: #FFF;
 }
 .site-footer .sidebar-container{
 	background-color: #82BFF5;
+	padding: 0;
 }
 .contato-footer .widget-area{
 	border-top: 1px solid #ccc;
@@ -231,12 +251,13 @@ div.rybena { float: right; }
 .site-footer .widget a {
 	color: #222;
 	text-decoration: none;
+	font-size: 12px;
 }
 .site-footer .widget a:hover{
 	color: #FFF;
 }
-.site-footer {
-	color: #FFF;
+.site-footer .widget {
+color: #333;
 }
 .site-info span.fundacao {
 	float: left;
@@ -260,7 +281,7 @@ div.rybena { float: right; }
 	list-style: none;
 }
 .site-footer h1{
-	font-size: 16px;
+	font-size: 14px;
 	margin: 0;
 }
 /* Front page */
@@ -271,6 +292,9 @@ div.rybena { float: right; }
 
 .sidebar .entry-header, .sidebar .entry-content, .sidebar .entry-summary, .sidebar .entry-meta{
 	padding: 0;
+}
+.sidebar .entry-meta {
+    margin: 0;
 }
 
 /* Home */
@@ -326,6 +350,8 @@ div.rybena { float: right; }
 	margin: 0;
 	padding: 0;
 	list-style: none;
+	font-size: 12px;
+	line-height: 18px;
 }
 .widget a{
 	color: #03519B;
@@ -410,7 +436,11 @@ padding: 8px 24px 8px;
 }
 
 /* Como ajudar */
-.como-ajudar{
+.como-ajudar-content {
+	padding-left: 20px;
+}
+.como-ajudar-content h2{
+	color: #03519B;
 }
 .como-ajudar-mini {
 	float: left;
@@ -418,9 +448,11 @@ padding: 8px 24px 8px;
 	border-radius: 5px;
 	border: 1px solid #ddd;
 	margin: 0 2.5%;
+	padding-left: 10px;
+	padding-bottom: 10px;
 }
 .como-ajudar-mini h2{
-	font-size: 20px;
+	font-size: 18px;
 	margin: 12px 0;
 }
 .img-comoajudar {

@@ -52,7 +52,6 @@
 				<a id="logo" href="<?php echo home_url(); ?>" title="Fundação Síndrome de Down">
 					<?php echo do_shortcode('[site_logo]'); ?>
 				</a>
-				<span class="slogan">Inclusão não é para maioria.<br/> Inclusão é total.</span>
 				<h3 class="menu-toggle"><?php _e( 'Menu', 'twentythirteen' ); ?></h3>
 				<a class="screen-reader-text skip-link" href="#content" title="<?php esc_attr_e( 'Skip to content', 'twentythirteen' ); ?>"><?php _e( 'Skip to content', 'twentythirteen' ); ?></a>
 				
@@ -61,7 +60,6 @@
 											'container'    => '' 
 										)); ?>
 
-				<?php get_sidebar( 'sociais' ); ?>
 				<!-- INCLUIR ESTA FUNCAO ONDE DESEJAR INCLUIR A BARRA PADRAO
 					 RYBENA -->
 				<script>
@@ -74,6 +72,7 @@
 											'menu_class'   => 'nav-menu',
 											'container'    => ''
 										) ); ?>
+				<?php get_sidebar( 'sociais' ); ?>
 				
 				<?php get_search_form(); ?>
 			</nav><!-- #site-navigation -->
