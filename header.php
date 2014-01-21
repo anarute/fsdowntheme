@@ -27,21 +27,21 @@
 	<!--[if lt IE 9]>
 	<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js"></script>
 	<![endif]-->
+
+
 	<?php wp_head(); ?>
-
-
+	
 	<!-- RYBENA HEAD -->
-	<script type="text/javascript"
-		src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 	<script 
 		src="<?php echo get_stylesheet_directory_uri(); ?>/js/rybenaDOM.js">
 	</script>
 	<script>
-	var jQueryRybena = $.noConflict();
-	jQueryRybena(document).ready( function () {
-	rybena('areaRybenaLibras','areaRybenaTTS');
-	});
+		var jQueryRybena = jQuery.noConflict();
+		jQueryRybena(document).ready( function () {
+			rybena('areaRybenaLibras','areaRybenaTTS');
+		});
 	</script>
+	
 	<!-- END RYBENA HEAD -->
 </head>
 
@@ -60,12 +60,9 @@
 											'container'    => '' 
 										)); ?>
 
-				<!-- INCLUIR ESTA FUNCAO ONDE DESEJAR INCLUIR A BARRA PADRAO
-					 RYBENA -->
-				<script>
-					//jQueryRybena(document).ready( function () {
-						includeRybena();	
-					//});
+				<!-- INCLUIR ESTA FUNCAO ONDE DESEJAR INCLUIR A BARRA PADRAO RYBENA -->
+				<script type="text/javascript">
+					includeRybena();	
 				</script>
 
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 
