@@ -46,8 +46,6 @@ get_header(); ?>
 					</div><!-- .entry-content -->
 					<?php endif; ?>
 
-					<?php get_sidebar( 'noticias' ); ?>
-
 					<footer class="entry-meta">
 						<?php if ( comments_open() && ! is_single() ) : ?>
 							<div class="comments-link">

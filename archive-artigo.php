@@ -34,9 +34,11 @@ get_header(); ?>
 
 					<div class="entry-content">
 						<div> <!-- para ter o fundinho branco -->
-						<?php while ( have_posts() ) : the_post(); ?>
-						<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-						<?php endwhile; ?>						
+							<ul>
+								<?php while ( have_posts() ) : the_post(); ?>
+								<li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+								<?php endwhile; ?>		
+							</ul>				
 						</div>
 					</div><!-- .entry-content -->
 
