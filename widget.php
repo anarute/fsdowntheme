@@ -13,7 +13,7 @@ class MBIFeaturedTabs_Widget extends WP_Widget {
                                   . ' em abas', 
                                   'text_domain' ), ) // Args
     );
-    $this->mbi_enqueue_styles();
+    add_action( 'wp_enqueue_scripts', array($this, 'mbi_enqueue_scripts'));
   }
 
   public function widget( $args, $instance ) {
@@ -86,12 +86,10 @@ class MBIFeaturedTabs_Widget extends WP_Widget {
 
 
   function mbi_enqueue_scripts(){
-    
-  }
-
-  function mbi_enqueue_styles(){
-    wp_register_style( 'mbi_featured_tabs_style', get_stylesheet_directory_uri() . '/css/featured-tabs.css' );
-    wp_enqueue_style( 'mbi_featured_tabs_style');
+    if (!is_admin()){
+        wp_register_style( 'mbi_featured_tabs_style', get_stylesheet_directory_uri() . '/css/featured-tabs.css' );
+        wp_enqueue_style( 'mbi_featured_tabs_style');
+    }
   }
 }
 
@@ -111,8 +109,7 @@ class MBINewsSlider_Widget extends WP_Widget {
     
     add_image_size( 'news-slider', 195, 130, true ); 
 
-    $this->mbi_enqueue_styles();
-    $this->mbi_enqueue_scripts();
+    add_action( 'wp_enqueue_scripts', array($this, 'mbi_enqueue_scripts'));
   }
 
   public function widget( $args, $instance ) {
@@ -188,16 +185,14 @@ class MBINewsSlider_Widget extends WP_Widget {
     return $result;
   }
   
-  function mbi_enqueue_scripts(){
-    wp_enqueue_script('jquery');
-    
-    wp_register_script( 'mbi_news_slider_script', get_stylesheet_directory_uri() . '/js/news-slider.js' );
-    wp_enqueue_script( 'mbi_news_slider_script' );
-  }
-
-  function mbi_enqueue_styles(){
-    wp_register_style( 'mbi_news_slider_style', get_stylesheet_directory_uri() . '/css/news-slider.css' );
-    wp_enqueue_style( 'mbi_news_slider_style');
+  public function mbi_enqueue_scripts(){
+    if (!is_admin()){
+        wp_register_style( 'mbi_news_slider_style', get_stylesheet_directory_uri() . '/css/news-slider.css' );
+        wp_enqueue_style( 'mbi_news_slider_style');
+        
+        wp_register_script( 'mbi_news_slider_script', get_stylesheet_directory_uri() . '/js/news-slider.js', array('jquery'));
+        wp_enqueue_script( 'mbi_news_slider_script' );
+    }
   }
 }
 
